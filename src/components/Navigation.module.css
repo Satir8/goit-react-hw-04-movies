@@ -1,0 +1,29 @@
+.navigationBox {
+  padding: 20px 0px 20px 44px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
+.navigationList {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navigationLink {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navigationLink:hover,
+.navigationLink:focus {
+  color: rgba(255, 100, 100, 0.7);
+}
+
+.navigationLink:not(:last-child) {
+  margin-right: 30px;
+}

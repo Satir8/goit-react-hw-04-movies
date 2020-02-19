@@ -1,0 +1,22 @@
+.moviesBox {
+  padding: 20px 0px 0px 44px;
+}
+
+.moviesInput {
+  width: 300px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.moviesInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0px 0px 0px 2px;
+}
+
+.moviesFormBtn:hover {
+  color: rgba(255, 100, 100, 0.6);
+}
+
+.moviesList {
+  list-style: none;
+  padding: 0px;
+}

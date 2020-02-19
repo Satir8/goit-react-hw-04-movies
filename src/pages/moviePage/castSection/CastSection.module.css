@@ -1,0 +1,32 @@
+.castWrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.castList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.castListItem:not(:last-child) {
+  width: 200px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.castImg {
+  width: 200px;
+  min-height: 300px;
+  height: auto;
+}
+
+.castName {
+  max-width: 200px;
+}
+
+.castCharacter {
+  max-width: 200px;
+}

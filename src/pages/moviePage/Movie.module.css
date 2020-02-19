@@ -1,0 +1,59 @@
+.moviePageBox {
+  max-width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 44px;
+}
+
+.moviePoster {
+  width: 360px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.Overview {
+  max-width: 600px;
+}
+
+.goBackBtn {
+  margin: 20px 0px 0px 44px;
+}
+
+.genreList {
+  padding: 0px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.additionalInfoWrapper {
+  border-top: 1px solid rgba(94, 94, 94, 0.5);
+  border-bottom: 1px solid rgba(94, 94, 94, 0.5);
+  padding: 10px 0px;
+}
+
+.additionalInfoHeading {
+  font-size: 20px;
+  padding: 0px 0px 0px 44px;
+  margin: 0px;
+}
+
+.additionainfolList {
+  list-style: none;
+  padding: 10px 0px 10px 44px;
+  margin: 0px;
+}
+
+.additionainfolLink {
+  font-size: 20px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.additionainfolLink:hover,
+.additionainfolLink:focus {
+  color: rgba(255, 100, 100, 0.7);
+}

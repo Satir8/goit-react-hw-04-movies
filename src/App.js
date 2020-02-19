@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
+import styles from "./App.module.css";
+import Navigation from "./components/Navigation";
+
+const LazyHome = lazy(() =>
+  import("./pages/homePage/Home" /* webpackChunkName: "Home-page" */)
+);
+const LazyMovies = lazy(() =>
+  import("./pages/moviesPage/Movies" /* webpackChunkName: "Movies-page" */)
+);
+const LazyMovie = lazy(() =>
+  import("./pages/moviePage/Movie" /* webpackChunkName: "Movie-page" */)
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Navigation />
+      <Suspense fallback={<h1>Wait a little...</h1>}>
+        <Switch>
+          <Route exact path="/" component={LazyHome} />
+          <Route path="/movies/:movieId" component={LazyMovie} />
+          <Route exact path="/movies" component={LazyMovies} />
+        </Switch>
+      </Suspense>
     </div>
   );
 }
