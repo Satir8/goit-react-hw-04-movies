@@ -31,7 +31,7 @@ class Movies extends Component {
 
   fetchMovies = async query => {
     const data = await axios.get(
-      `${process.env.REACT_APP_BASIC_URL}search/movie?api_key=${process.env.REACT_APP_SECURE_KEY}&language=en-US&query=${query}&page=1&include_adult=true`
+      `${process.env.REACT_APP_BASIC_URL}search/movie?api_key=${process.env.REACT_APP_SECURE_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
     );
     return data;
   };
