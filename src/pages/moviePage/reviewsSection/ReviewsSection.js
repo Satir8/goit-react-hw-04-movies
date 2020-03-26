@@ -12,11 +12,13 @@ class ReviewsSection extends Component {
     const data = await axios.get(
       `${process.env.REACT_APP_BASIC_URL}movie/${movieId}/reviews?api_key=${process.env.REACT_APP_SECURE_KEY}&language=en-US&page=1`
     );
-    this.setState({ reviews: data.data.results });
+    data.data.results.length > 0 &&
+      this.setState({ reviews: data.data.results });
   }
 
   render() {
     const { reviews } = this.state;
+    console.log(reviews);
     return (
       <>
         {reviews ? (
@@ -29,7 +31,9 @@ class ReviewsSection extends Component {
             ))}
           </ul>
         ) : (
-          <p>There is no reviews for this movie...</p>
+          <p className={styles.noRewiews}>
+            There is no reviews for this movie...
+          </p>
         )}
       </>
     );

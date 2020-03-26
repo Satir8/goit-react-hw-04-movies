@@ -28,6 +28,7 @@ class CastSection extends Component {
                       src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}
                       alt=""
                       className={styles.castImg}
+                      
                     />
                     <p className={styles.castName}>{item.name}</p>
                     <p className={styles.castCharacter}>

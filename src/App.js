@@ -17,7 +17,7 @@ function App() {
   return (
     <div className={styles.App}>
       <Navigation />
-      <Suspense fallback={<h1>Wait a little...</h1>}>
+      <Suspense fallback={<h1 className={styles.spinner}>Wait a little...</h1>}>
         <Switch>
           <Route exact path="/" component={LazyHome} />
           <Route path="/movies/:movieId" component={LazyMovie} />

@@ -11,22 +11,29 @@
   list-style: none;
 }
 
-.castListItem:not(:last-child) {
+.castListItem {
   width: 200px;
   height: auto;
+}
+
+.castListItem:not(:last-child) {
   margin-right: 40px;
 }
 
 .castImg {
   width: 200px;
-  min-height: 300px;
   height: auto;
+  object-fit: cover;
 }
 
 .castName {
+  color: rgba(0, 0, 0, 0.8);
   max-width: 200px;
+  margin: 10px 0 10px 0;
 }
 
 .castCharacter {
+  color: rgba(0, 0, 0, 0.8);
   max-width: 200px;
+  margin: 0 0 16px 0;
 }

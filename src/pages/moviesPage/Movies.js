@@ -43,6 +43,7 @@ class Movies extends Component {
   render() {
     const { movies, moviesInput } = this.state;
     const { location } = this.props;
+    console.log(movies);
     return (
       <div className={styles.moviesBox}>
         <form onSubmit={this.handleSubmit}>
@@ -52,7 +53,7 @@ class Movies extends Component {
               type="text"
               name="moviesInput"
               value={moviesInput}
-              placeholder="Looking for a good film?"
+              placeholder="Looking for a film?"
               className={styles.moviesInput}
               onChange={this.handleChange}
             />
@@ -63,17 +64,34 @@ class Movies extends Component {
         </form>
         <ul className={styles.moviesList}>
           {movies.map(item => {
-            const { id, title } = item;
+            const { id, title, poster_path } = item;
             return (
-              <li key={id}>
+              <li key={id} className={styles.listItem}>
                 {
                   <Link
                     to={{
                       pathname: `movies/${id}`,
                       state: { location, id }
                     }}
+                    className={styles.listItemLink}
                   >
-                    {title}
+                    {poster_path ? (
+                      <>
+                        <img
+                          src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`}
+                          alt="Poster"
+                          className={styles.movieImg}
+                        />
+                        <div className={styles.overlay}></div>
+                      </>
+                    ) : (
+                      <p className={styles.backdropText}>
+                        Sorry, no image here...
+                      </p>
+                    )}
+                    <h4 className={styles.movieTitle}>
+                      {title.length < 35 ? title : title.slice(0, 34) + "..."}
+                    </h4>
                   </Link>
                 }
               </li>

@@ -4,3 +4,10 @@
   padding: 20px;
   margin: 0px;
 }
+
+.noRewiews {
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 40px 0px;
+}

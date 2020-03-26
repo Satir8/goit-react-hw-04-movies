@@ -8,7 +8,8 @@
 .moviePoster {
   width: 360px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 30px;
+  border-radius: 2%;
 }
 
 .Overview {
@@ -16,7 +17,21 @@
 }
 
 .goBackBtn {
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(100, 154, 255, 0.2);
+  border-radius: 5%;
+  padding: 4px 16px;
   margin: 20px 0px 0px 44px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.goBackBtn:hover {
+  background-color: rgba(255, 100, 100, 0.5);
 }
 
 .genreList {
