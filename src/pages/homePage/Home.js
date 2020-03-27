@@ -43,11 +43,23 @@ class Home extends Component {
                       <div className={styles.overlay}></div>
                     </>
                   ) : (
-                    <p className={styles.backdropText}>Sorry, no image here...</p>
+                    <p className={styles.backdropText}>
+                      Sorry, no image here...
+                    </p>
                   )}
 
                   <h4 className={styles.movieTitle}>
-                    {title.length < 35 ? title : title.slice(0, 34) + "..."}
+                    {title ? (
+                      title.length < 35 ? (
+                        title
+                      ) : (
+                        title.slice(0, 34) + "..."
+                      )
+                    ) : (
+                      <p className={styles.titleBackdrop}>
+                        Sorry, title not found...
+                      </p>
+                    )}
                   </h4>
                 </Link>
               </li>

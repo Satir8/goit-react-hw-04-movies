@@ -62,6 +62,10 @@
   margin: 0 0 30px 0;
 }
 
+.titleBackdrop {
+  margin: 0 0 30px 0;
+}
+
 .listItemLink:hover {
   color: rgba(255, 100, 100, 0.7);
 }
